@@ -1,0 +1,324 @@
+  @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+@font-face {
+  font-family: 'Gilroy';
+  src: local('Gilroy'), url(../fonts/Gilroy.otf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Akrobat';
+  src: local('Akrobat'), url(../fonts/Akrobat.otf) format('truetype');
+}
+
+
+
+
+
+* {
+  padding: 0; margin: 0;
+  user-select: none; box-sizing: border-box;
+}
+
+.nui-wrapper {
+  position: absolute; display: flex;
+  width: 100%; height: 100%;
+  align-items: center; justify-content: center;
+  overflow:hidden;
+  background-color: #1E1E1E;
+}
+
+.nui-wrapper > .Container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 1vh;
+  background-blend-mode: screen;
+  mix-blend-mode: lighten;
+  align-items: center;
+}
+
+.LeftPartContainer {
+  height: 100%;
+  z-index: 80 !important;
+  width: 20vw;
+  background: linear-gradient(180deg, rgba(52, 254, 146, 0.541) 0%, rgba(39, 237, 131, 0.22) 100%);}
+
+.CenterPartContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 56vw;
+  flex-direction: column;
+  gap: 2vw;
+}
+.guy {
+  position: absolute;
+  left: 75%;
+  top: 7vw;
+  z-index: 8;
+  
+}
+
+.guy img {
+  height:95vh;
+  width: auto;
+}
+.border {
+  position: absolute;
+  z-index: -8 !important;
+  /* border: 1px solid red; */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50% , -50%);
+
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 98%;
+  height: 95%;
+  
+  border: 1px dashed rgba(255, 255, 255, 0.3);
+}
+
+.header {
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+gap: 2vw;
+width: 100%;
+padding-top: 4vw;
+
+}
+
+hr{
+  border: 0.1vw solid white;
+  outline: none;
+}
+
+.header p {
+  color: white;
+}
+
+.headerTitle {
+  color:  white;
+  font-family: Akrobat;
+  font-weight: bold;
+}
+
+.PicturesSlides {
+  max-height: 10vh;
+
+  width: 15vw;
+  margin-left:0.5vw;
+}
+
+.slick-slide > div {
+  display: grid;
+  place-items: center;
+  width: 70%;
+  margin-top: 50px;
+  margin: auto;
+  padding: 0px;
+}
+.News {
+  height: 100%;
+  width: 19vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+  margin-left: 1vw;
+}
+
+.servernews {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center ;
+  align-items: center;
+  gap: 1vw;
+  
+  /* margin-left: 0.5vw; */
+}
+
+.servernews h1 {
+  text-align: right;
+  font-size: calc(6.4px + 0.4vw);
+}
+
+
+.headerTip {
+  position: absolute;
+  top: -0.8vw;
+  /* height: 100%; */
+  width: 100%;
+  height: 4vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: -1vw;
+}
+
+.LoadingPart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex-direction: column;
+}
+
+.backShapes {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  flex-direction: row;
+  gap:5.87vw;
+  z-index: 2;
+
+  opacity: 0.7;
+
+}
+
+
+.backShape {
+  box-sizing: border-box;
+  /* position: absolute; */
+  width: 323px;
+  height: 100vw;
+  opacity: 0.3;
+  background: radial-gradient(70.93% 70.93% at 113.43% 23.31%, rgba(53, 255, 147, 0.4) 0%, rgba(53, 255, 147, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  border: 1px solid #35FF93;
+  transform: rotate(-135deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.LoadingPart img {
+  height: 17vw;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.percentage {
+  margin-left: -8.4vw;
+  color: white;
+  z-index: 90;
+  font-size: calc(25.4px + 0.4vw);
+  font-family: Akrobat;
+  display: flex;
+  align-items: flex-end;
+}
+
+.percentageBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 0.3vw;
+  width: 50vw;
+  margin-top: -3vw;
+  margin-left: 2vw;
+  height: 10vh;
+
+  background: #000000;
+  box-shadow: 0px 4px 43px #35FF93;
+  border-radius: 50px;
+  transform: rotate(-2deg);
+  padding-left: 0.4vw;
+  padding-right: 0.4vw;
+}
+
+.Bar {
+  box-sizing: border-box;
+  width: 90px;
+  height: 90px;
+  background: radial-gradient(49.57% 49.57% at 71.43% 49.08%, rgba(53, 255, 147, 0.25) 0%, rgba(53, 255, 147, 0.2075) 100%);
+  border: 2px solid rgba(53, 255, 147, 0.25);
+ 
+
+}
+
+.bar :first-child{
+  border-radius: 30px !important;
+}
+.bar :last-child{
+  border-radius: 30px !important;
+}
+
+.ActiveBar {
+  background: radial-gradient(49.57% 49.57% at 71.43% 49.08%, #35FF93 0%, rgba(0, 221, 103, 0.83) 100%) !important;  /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  border: 2px solid #35FF93 !important;
+  box-shadow: 0px 0px 19px #35FF93 !important;
+
+}
+
+.Box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5vw;
+  background: rgba(0, 0, 0, 0.25);
+  width: 90%;
+  padding-bottom:0.7vw;
+
+
+}
+
+.boxText{
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 3 !important;
+  -webkit-box-orient: vertical;
+}
+
+.Expanded {
+  display: -webkit-box;
+  -webkit-line-clamp: 15 !important;
+  -webkit-box-orient: vertical;
+}
+.Box p {
+  padding-left: 1vw;
+  padding-top: 1vw;
+
+}
+.newsPart{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5vw;
+
+  width: 17vw;
+}
+
+.sliderPhoto  {
+  height: 1vw;
+  width: auto;
+}
+
+.each-slide-effect > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  height: 350px;
+}
+
+.each-slide-effect span {
+  padding: 20px;
+  font-size: 20px;
+  background: #efefef;
+  text-align: center;
+}

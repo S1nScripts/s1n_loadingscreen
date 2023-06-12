@@ -1,0 +1,35 @@
+{
+    "ServerName" : [
+        "GTA ROLEPLAY SERVER"
+    ],
+    "ServerTip" : [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam erat ligula, scelerisque nec venenatis semper, malesuada eget turpis.Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    ],
+    "Photos": [
+      "https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg",
+      "https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg",
+      "https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg"
+    ],
+    "Texts": [
+      {
+        "News": [
+            {
+          "content": "News content 1",
+          "date": "06.12.2023"
+        }
+        ],
+        "Events": [
+            {
+          "content": "News content 1",
+          "date": "06.12.2023"
+        }
+        ],
+        "Rules": [
+            {
+          "content": "News content 1",
+          "date": "06.12.2023"
+        }
+        ]
+      }
+    ]
+  }
