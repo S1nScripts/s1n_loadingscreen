@@ -6,7 +6,7 @@
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam erat ligula, scelerisque nec venenatis semper, malesuada eget turpis.Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     ],
     "Photos": [
-      "https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg",
+      "https://assetsio.reedpopcdn.com/michael_gta_online.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp",
       "https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg",
       "https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg"
     ],
@@ -14,21 +14,19 @@
       {
         "News": [
             {
-          "content": "News content 1",
+          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam erat ligula, scelerisque nec venenatis semper, malesuada eget turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam erat ligula, scelerisque nec venenatis semper, malesuada eget turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam erat ligula, scelerisque nec venenatis semper, malesuada eget turpis.",
           "date": "06.12.2023"
         }
         ],
         "Events": [
             {
-          "content": "News content 1",
-          "date": "06.12.2023"
-        }
+              "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam erat ligula, scelerisque nec venenatis semper, malesuada eget turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam erat ligula, scelerisque nec venenatis semper, malesuada eget turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam erat ligula, scelerisque nec venenatis semper, malesuada eget turpis."
+            }
         ],
         "Rules": [
             {
-          "content": "News content 1",
-          "date": "06.12.2023"
-        }
+              "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam erat ligula, scelerisque nec venenatis semper, malesuada eget turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam erat ligula, scelerisque nec venenatis semper, malesuada eget turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam erat ligula, scelerisque nec venenatis semper, malesuada eget turpis."
+            }
         ]
       }
     ]

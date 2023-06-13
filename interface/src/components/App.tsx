@@ -57,7 +57,7 @@ const App: React.FC = () => {
 
 const settings = {
   dots: false,
-  infinite: true,
+  infinite: false,
   speed: 500,
   slidesToShow: 1,
   slidesToScroll: 1
@@ -97,7 +97,7 @@ const settings = {
               <hr style={{color: 'white',width: '11vw'}}></hr>
             </div>
             <div className="headerTitle">
-              <h1>{json.ServerName}</h1>
+              <h1 style={{fontFamily: 'Akrobat'}}>{json.ServerName}</h1>
             </div>
             <hr  style={{color: 'white',width: '16vw'}}></hr>
             <div className="PicturesSlides">
@@ -118,7 +118,7 @@ const settings = {
                 <div className="newsPart">
                 <div className="servernews">
                   <h1>SERVER NEWS</h1>
-                  <hr style={{color: 'white' , width: '4vw'}}></hr>
+                  <hr style={{color: 'white' , width: '4vw', height: '0.1vw', border: '0.1px solid white'}}></hr>
                   <p>{json.Texts[0].News[0].date}</p>
                 
                 </div>
@@ -138,15 +138,14 @@ const settings = {
                         }
                       }}  src={textToShow.includes('news') && textToShow.length > 1 ? arrowdown : arrowup}></img>
                 </div>
-                <hr  style={{color: 'white',width: '16vw'}}></hr>
+                <hr  style={{color: 'white',width: '17vw'}}></hr>
               </div>
               : ''}
                 {textToShow.includes ('events') ? 
                   <div className="newsPart">
                   <div className="servernews">
                     <h1>SERVER EVENTS</h1>
-                    <hr style={{color: 'white' , width: '4vw'}}></hr>
-                    <p>{json.Texts[0].Events[0].date}</p>
+                    <hr style={{color: 'white' , width: '10.4vw'}}></hr>
                   
                   </div>
                   <div className="Box">
@@ -165,15 +164,14 @@ const settings = {
                         }
                       }} src={textToShow.includes('news') && textToShow.length > 1 ? arrowdown : arrowup}></img>
                   </div>
-                  <hr  style={{color: 'white',width: '16vw'}}></hr>
+                  <hr  style={{color: 'white',width: '17vw'}}></hr>
                 </div>
                 :''}
                  {textToShow.includes ('rules')  ? 
                     <div className="newsPart">
                     <div className="servernews">
                       <h1>SERVER RULES</h1>
-                      <hr style={{color: 'white' , width: '4vw'}}></hr>
-                      <p>{json.Texts[0].Rules[0].date}</p>
+                      <hr style={{color: 'white' , width: '10.9vw'}}></hr>
                     
                     </div>
                     <div className="Box ">
