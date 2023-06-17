@@ -17,21 +17,6 @@ import 'slick-carousel/slick/slick-theme.css';
 import jsonData from '../config/config.json';
 
 
-// import { fetchNui } from "../utils/fetchNui";
-// import { Grid } from "@mui/material";
-// import { Button } from "@mui/material";
-// import pineaple from "../images/pineapple.png";
-// import arrows from "../images/arrows.png";
-// import del from "../images/del.png";
-// import xIcon from "../images/close.png";
-// import { useNuiEvent } from "../hooks/useNuiEvent";
-
-// import SearchIcon from "@mui/icons-material/Search";
-// import Alert from "./Alert";
-
-// import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
-// import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-
 debugData([
   {
     action: "setVisible",
@@ -43,16 +28,14 @@ const App: React.FC = () => {
   const [text, setText] = useState(0)
   const [textToShow, setTextToShow] = useState<any | null>(['rules' , 'events' , 'news'])
 
-
   const loadedData = JSON.stringify(jsonData);
   const json = JSON.parse(loadedData);
   window.addEventListener("message", (e:any) => {
     if (e.data.eventName === "loadProgress") {
       let percent = e.data.loadFraction * 100
+
       setText(Math.floor(percent))
     }
-
-   
 });
 
 const settings = {

@@ -1,4 +1,4 @@
-function SendReactMessage(action, data)
+local function sendReactMessage(action, data)
     SendNUIMessage({
       action = action,
       data = data
@@ -7,7 +7,7 @@ function SendReactMessage(action, data)
 
 local function toggleNuiFrame(shouldShow)
     SetNuiFocus(shouldShow, shouldShow)
-    SendReactMessage("setVisible", shouldShow)
+    sendReactMessage("setVisible", shouldShow)
 end
 
 Citizen.CreateThread(function()
