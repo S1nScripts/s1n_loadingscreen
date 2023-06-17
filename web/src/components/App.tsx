@@ -15,6 +15,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import jsonData from '../config/config.json';
+import {useNuiEvent} from "../hooks/useNuiEvent";
 
 
 debugData([
@@ -24,28 +25,34 @@ debugData([
   },
 ]);
 
-const App: React.FC = () => {
+const App: () => void = () => {
   const [text, setText] = useState(0)
-  const [textToShow, setTextToShow] = useState<any | null>(['rules' , 'events' , 'news'])
+  const [textToShow, setTextToShow] = useState<any | null>(['rules', 'events', 'news'])
+  const [config, setConfig] = useState<any>({});
 
   const loadedData = JSON.stringify(jsonData);
   const json = JSON.parse(loadedData);
-  window.addEventListener("message", (e:any) => {
+  window.addEventListener("message", (e: any) => {
     if (e.data.eventName === "loadProgress") {
       let percent = e.data.loadFraction * 100
 
       setText(Math.floor(percent))
     }
-});
+  });
 
-const settings = {
-  dots: false,
-  infinite: false,
-  speed: 500,
-  slidesToShow: 1,
-  slidesToScroll: 1
-};
+  useNuiEvent<object>("setConfig", (data: object | any) => {
+    setConfig(data);
+  });
 
+  const settings = {
+    dots: false,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  };
+
+  // @ts-ignore
   return (
     <div className="nui-wrapper">
       <div className="Container" style={{backgroundImage: `url(${backgroundimage})` , backgroundSize: 'cover'}}>
@@ -100,12 +107,12 @@ const settings = {
               {textToShow.includes ('news')  ? 
                 <div className="newsPart">
                 <div className="servernews">
-                  <h1>SERVER NEWS</h1>
+                  <h1>{ config.messages.TITLE_SERVER_NEWS }</h1>
                   <hr style={{color: 'white' , width: '4vw', height: '0.1vw', border: '0.1px solid white'}}></hr>
                   <p>{json.Texts[0].News[0].date}</p>
-                
+
                 </div>
-                <div className="Box ">
+                <div className="Box">
                 <div className={textToShow.includes('news') && textToShow.length > 1 ? 'boxText' : 'boxText Expanded'}>
                   <p>{json.Texts[0].News[0].content}</p>
                   </div>
@@ -127,7 +134,7 @@ const settings = {
                 {textToShow.includes ('events') ? 
                   <div className="newsPart">
                   <div className="servernews">
-                    <h1>SERVER EVENTS</h1>
+                    <h1>{ config.messages.TITLE_SERVER_EVENTS }</h1>
                     <hr style={{color: 'white' , width: '10.4vw'}}></hr>
                   
                   </div>
@@ -153,7 +160,7 @@ const settings = {
                  {textToShow.includes ('rules')  ? 
                     <div className="newsPart">
                     <div className="servernews">
-                      <h1>SERVER RULES</h1>
+                      <h1>{ config.messages.TITLE_SERVER_RULES }</h1>
                       <hr style={{color: 'white' , width: '10.9vw'}}></hr>
                     
                     </div>

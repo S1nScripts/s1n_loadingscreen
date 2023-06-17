@@ -8,6 +8,7 @@ local function sendReactMessage(action, data)
 local function toggleNuiFrame(shouldShow)
     SetNuiFocus(shouldShow, shouldShow)
     sendReactMessage("setVisible", shouldShow)
+    sendReactMessage("setConfig", S1nScripts.LoadingScreen.Config)
 end
 
 Citizen.CreateThread(function()
