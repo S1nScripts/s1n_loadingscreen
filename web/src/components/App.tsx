@@ -4,7 +4,7 @@ import {debugData} from "../utils/debugData";
 
 import backgroundimage from '../images/backgroundimage.png'
 import backgroundimage2 from '../images/backgroundimg2.png'
-import tip from '../images/tip.png'
+import tip from '../images/TiP.png'
 import backShape from '../images/backshape.png'
 import loadingPNG from '../images/LOADING.png'
 import guy from '../images/guyinrightsize.png'
