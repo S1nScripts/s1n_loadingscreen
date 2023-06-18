@@ -8,9 +8,22 @@ local function sendReactMessage(action, data)
 local function toggleNuiFrame(shouldShow)
     SetNuiFocus(shouldShow, shouldShow)
     sendReactMessage("setVisible", shouldShow)
-    sendReactMessage("setConfig", S1nScripts.LoadingScreen.Config)
 end
 
+-- Set config for the React part
+local sentConfig = false
+
 Citizen.CreateThread(function()
+    while not sentConfig do
+        sendReactMessage("setConfig", S1nScripts.LoadingScreen.Config)
+        Citizen.Wait(1000)
+    end
+
     toggleNuiFrame(true)
+
+    Debug("setConfig sent")
+end)
+
+RegisterNUICallback('dataSent', function()
+    sentConfig = true
 end)

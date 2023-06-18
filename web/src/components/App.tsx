@@ -15,6 +15,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import {useNuiEvent} from "../hooks/useNuiEvent";
+import {fetchNui} from "../utils/fetchNui";
 
 
 debugData([
@@ -39,6 +40,7 @@ const App = () => {
 
     useNuiEvent<object>("setConfig", (data: object | any) => {
         setConfig(data);
+        fetchNui('dataSent');
     });
 
     const settings = {
