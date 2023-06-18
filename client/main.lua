@@ -10,6 +10,6 @@ local function toggleNuiFrame(shouldShow)
     sendReactMessage("setVisible", shouldShow)
 end
 
-Citizen.CreateThread(function()
+CreateThread(function()
     toggleNuiFrame(true)
 end)
