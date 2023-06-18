@@ -15,7 +15,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import {useNuiEvent} from "../hooks/useNuiEvent";
-import {fetchNui} from "../utils/fetchNui";
+import * as config from "../../config/config.json";
 
 
 debugData([
@@ -28,7 +28,6 @@ debugData([
 const App = () => {
     const [text, setText] = useState(0)
     const [textToShow, setTextToShow] = useState<any | null>(['rules', 'events', 'news'])
-    const [config, setConfig] = useState<any>({});
 
     window.addEventListener("message", (e: any) => {
         if (e.data.eventName === "loadProgress") {
@@ -36,12 +35,6 @@ const App = () => {
 
             setText(Math.floor(percent))
         }
-    });
-
-    useNuiEvent<object>("setConfig", (data: object | any) => {
-        console.log(data);
-        setConfig(data);
-        fetchNui('dataSent');
     });
 
     const settings = {
