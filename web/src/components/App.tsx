@@ -14,7 +14,6 @@ import arrowdown from '../images/arrowdown.png'
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import {useNuiEvent} from "../hooks/useNuiEvent";
 import * as config from "../../config/config.json";
 
 
