@@ -39,6 +39,7 @@ const App = () => {
     });
 
     useNuiEvent<object>("setConfig", (data: object | any) => {
+        console.log(data);
         setConfig(data);
         fetchNui('dataSent');
     });
