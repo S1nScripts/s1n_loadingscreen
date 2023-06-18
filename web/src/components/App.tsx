@@ -24,7 +24,7 @@ debugData([
     },
 ]);
 
-const App: () => void = () => {
+const App = () => {
     const [text, setText] = useState(0)
     const [textToShow, setTextToShow] = useState<any | null>(['rules', 'events', 'news'])
     const [config, setConfig] = useState<any>({});
