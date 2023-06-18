@@ -8,6 +8,7 @@ client_scripts {
 }
 
 loadscreen 'web/build/index.html'
+ui_page 'web/build/index.html'
 
 
 files {
