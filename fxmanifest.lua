@@ -3,13 +3,10 @@ games { 'rdr3', 'gta5' }
 
 
 client_scripts {
-    'config.lua',
     'client/main.lua'
 }
 
 loadscreen 'web/build/index.html'
-ui_page 'web/build/index.html'
-
 
 files {
     'web/build/index.html',
