@@ -11,8 +11,8 @@ loadscreen 'web/build/index.html'
 
 
 files {
-    'interface/build/index.html',
-    'interface/build/**/*'
+    'web/build/index.html',
+    'web/build/**/*'
 }
 
 loadscreen_cursor 'yes'
